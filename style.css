@@ -1,0 +1,29 @@
+/*
+Theme Name: Tema por definir
+Description: Un tema para una excelente comunidad.
+Author: Camilo F.
+Version: 1.0
+*/
+
+
+* {
+    box-sizing: border-box;
+}
+/* GOOD WIDTH */
+.inline-text-box {
+  width: 50%;
+}
+/* BAD WIDTH */
+.inline-text-box {
+  width: 800px;
+}
+/* GOOD IMAGE */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* BAD IMAGE */
+img {
+  width: 100%;
+  height: auto;
+}

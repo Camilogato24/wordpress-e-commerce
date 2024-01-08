@@ -1,0 +1,201 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* @media (min-width: 640px) {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+}
+@media (min-width: 768px) {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+} */
+
+#content {
+    background-color: #FFF;
+    background: #FFF;
+}
+
+.anuncios-lista {
+    padding-top: 2em;
+}
+
+#row-anuncios {
+    display: flex;
+    flex-direction: column;
+}
+
+#row-anuncios .anuncio {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: grid;
+    border-bottom: 1px solid #eeeeee;
+    padding: 1em 0;
+}
+
+#row-anuncios .anuncio:nth-child(even) {
+    background-color: rgba(223, 165, 213, .2);
+}
+
+#row-anuncios .anuncio .anuncio-imagen {
+    grid-column: span 2 / span 2;
+    aspect-ratio: 3 / 4;
+}
+
+#row-anuncios .anuncio .anuncio-contenido {
+    grid-column: span 10 / span 10;
+    padding: 1em 2em;
+}
+
+#row-anuncios .anuncio .anuncio-contenido h2 {
+    text-transform: uppercase;
+}
+
+#row-anuncios .anuncio .anuncio-contenido .social-media {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    width: 100%;
+    align-items: center;
+    height: 50px;
+    place-items: center;
+}
+
+#row-anuncios .anuncio .anuncio-contenido .social-media img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+#row-anuncios .anuncio .anuncio-imagen img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+#list-anuncios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+#list-anuncios .anuncio {
+    border-radius: 0.5rem;
+    padding: 0.75em;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border: 1px solid #eeeeee;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+#list-anuncios .anuncio .anuncio-imagen {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+}
+
+#list-anuncios .anuncio .anuncio-imagen img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+#list-anuncios .anuncio .anuncio-imagen img:hover {
+    transform: scale(1.05);
+}
+
+#list-anuncios .anuncio .anuncio-contenido {
+    padding: 0 0.5em;
+}
+
+#list-anuncios .anuncio .anuncio-contenido h2 {
+    text-transform: uppercase;
+}
+
+#list-anuncios .anuncio .anuncio-contenido .description {
+    height: 39px;
+    overflow: hidden;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.post:hover {
+    transform: scale(1.05);
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.entry-header {
+    padding: 20px;
+}
+
+.entry-title {
+    margin: 0;
+}
+
+.entry-meta {
+    color: #888;
+}
+
+.read-more {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.read-more:hover {
+    background-color: #2980b9;
+}
+
+.price {
+    background: #883079;
+    color: #FFF;
+    padding: 0.5em 0.5em;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+    transition: background-position 1s steps(28);
+    transition-duration: 0s;
+  }
+  .heart.is-active {
+    transition-duration: 1s;
+    background-position: -2800px 0;
+  }
+
+  .stage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
